@@ -1,0 +1,346 @@
+﻿/* Основні налаштування сторінки */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f2f5f9;
+    color: #243449;
+    line-height: 1.6;
+}
+
+/* Верхня частина сайту */
+.site-header {
+    background: #31566e;
+    color: white;
+    padding: 32px 20px;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.site-header h1 {
+    margin: 0 0 6px;
+    font-size: 30px;
+}
+
+.site-header p {
+    margin: 0;
+    color: #dce8f0;
+}
+
+/* Основний контейнер */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 12px rgba(25, 48, 70, 0.05);
+}
+
+    .panel h2 {
+        margin: 0 0 18px;
+        font-size: 21px;
+        color: #31566e;
+    }
+
+/* Поля вибору */
+.controls {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 180px;
+}
+
+    .field label {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+
+    .field select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 7px;
+        background: #fff;
+        color: #243449;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+        .field select:focus {
+            outline: 2px solid #90b5cc;
+            border-color: #31566e;
+        }
+
+/* Кнопки */
+button {
+    padding: 12px 24px;
+    background: #31566e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    button:hover {
+        background: #24445a;
+    }
+
+    button:disabled {
+        background: #94a3b8;
+        cursor: not-allowed;
+    }
+
+/* Повідомлення */
+.status {
+    margin: 15px 0 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+    .status:empty {
+        display: none;
+    }
+
+    .status.error {
+        color: #c0392b;
+    }
+
+    .status.success {
+        color: #23724c;
+    }
+
+/* Найближче свято */
+.nearest-holiday {
+    padding: 20px;
+    background: #edf5fa;
+    border: 1px solid #d6e8f3;
+    border-radius: 9px;
+}
+
+    .nearest-holiday h3 {
+        margin: 0 0 8px;
+        color: #31566e;
+        font-size: 20px;
+    }
+
+    .nearest-holiday p {
+        margin: 5px 0;
+    }
+
+.days-counter {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    background: #31566e;
+    color: white;
+    font-weight: 600;
+}
+
+/* Заголовок таблиці */
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+    .section-heading h2 {
+        margin: 0;
+    }
+
+.count {
+    background: #e7edf3;
+    color: #31566e;
+    border-radius: 20px;
+    padding: 5px 13px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Таблиця державних свят */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead {
+    background: #31566e;
+    color: white;
+}
+
+th {
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 13px 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background: #f5f9fc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.holiday-nearest {
+    background: #e8f5ec;
+}
+
+    .holiday-nearest:hover {
+        background: #d9efdf;
+    }
+
+/* Блок порівняння */
+.description {
+    margin: -5px 0 20px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.comparison-result {
+    margin-top: 22px;
+}
+
+    .comparison-result:empty {
+        display: none;
+    }
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.comparison-card {
+    padding: 22px;
+    border: 1px solid #dce6ee;
+    background: #f7fafc;
+    border-radius: 9px;
+    text-align: center;
+}
+
+    .comparison-card h3 {
+        margin: 0 0 12px;
+        font-size: 18px;
+        color: #31566e;
+    }
+
+.comparison-number {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    color: #31566e;
+}
+
+.comparison-label {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Нижня частина сайту */
+.site-footer {
+    padding: 22px;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Адаптація під планшети */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        margin: 20px auto;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .field {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Адаптація під телефони */
+@media (max-width: 480px) {
+    .site-header {
+        padding: 25px 15px;
+    }
+
+        .site-header h1 {
+            font-size: 22px;
+        }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-number {
+        font-size: 30px;
+    }
+}

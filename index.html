@@ -1,0 +1,117 @@
+﻿    <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календар державних свят</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Календар державних свят</h1>
+            <p>Перегляд свят різних країн за допомогою Nager.Date API</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="panel">
+            <h2>Пошук державних свят</h2>
+            <div class="controls">
+                <div class="field">
+                    <label for="country">Країна</label>
+                    <select id="country">
+                        <option value="UA">Україна</option>
+                        <option value="PL">Польща</option>
+                        <option value="DE">Німеччина</option>
+                        <option value="US">США</option>
+                        <option value="GB">Велика Британія</option>
+                        <option value="FR">Франція</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="year">Рік</label>
+                    <select id="year"></select>
+                </div>
+            </div>
+            <p id="status" class="status" role="status"></p>
+        </section>
+
+        <section class="panel" id="nearest-section">
+            <h2>Найближче свято</h2>
+            <div id="nearest-holiday" class="nearest-holiday">
+                <p>Очікування даних...</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section-heading">
+                <h2>Список свят</h2>
+                <span id="holiday-count" class="count">0 свят</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Дата</th>
+                            <th>Назва свята</th>
+                            <th>Місцева назва</th>
+                            <th>Тип</th>
+                        </tr>
+                    </thead>
+                    <tbody id="holiday-list"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Порівняння свят двох країн</h2>
+            <p class="description">
+                Виберіть дві країни для порівняння кількості
+                державних свят за обраний рік.
+            </p>
+
+            <div class="controls">
+                <div class="field">
+                    <label for="compare-country-1">Перша країна</label>
+                    <select id="compare-country-1">
+                        <option value="UA">Україна</option>
+                        <option value="PL">Польща</option>
+                        <option value="DE">Німеччина</option>
+                        <option value="US">США</option>
+                        <option value="GB">Велика Британія</option>
+                        <option value="FR">Франція</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="compare-country-2">Друга країна</label>
+                    <select id="compare-country-2">
+                        <option value="PL">Польща</option>
+                        <option value="UA">Україна</option>
+                        <option value="DE">Німеччина</option>
+                        <option value="US">США</option>
+                        <option value="GB">Велика Британія</option>
+                        <option value="FR">Франція</option>
+                    </select>
+                </div>
+
+                <button id="compare-btn" type="button">
+                    Порівняти
+                </button>
+            </div>
+
+            <div id="comparison-result" class="comparison-result"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Лабораторна робота №2 — Варіант 20</p>
+    </footer>
+
+    <script src="https://unpkg.com/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
